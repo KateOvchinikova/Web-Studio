@@ -1,0 +1,146 @@
+.mobal-menu-container {
+  display: none;
+  position: absolute;
+  z-index: 4;
+  top: 0;
+  left: 0;
+  width: 100vh;
+  height: 100vh;
+  overflow-x: scroll;
+  @media screen and (max-width: 430px) {
+    padding-left: 15px;
+  }
+  padding-top: 48px;
+  padding-left: 40px;
+  padding-right: 15px;
+  background-color: $main-color;
+
+  &.is-open {
+    display: block;
+  }
+}
+.menu-button {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 0;
+  padding: 10px 0;
+
+  border: none;
+  background-color: transparent;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+
+  &.is-open .menu-button__icon .icon-cross {
+    opacity: 1;
+    fill: $logo-color;
+    &:hover,
+    &:focus {
+      fill: $accent-color;
+    }
+  }
+  &.is-open .menu-button__icon .icon-menu {
+    opacity: 0;
+  }
+}
+
+.menu-button__icon {
+  & .icon-cross {
+    opacity: 0;
+  }
+  & .icon-menu {
+    fill: $logo-color;
+
+    &:hover,
+    &:focus {
+      fill: $accent-color;
+    }
+  }
+}
+
+.mobile-list {
+  @extend %list;
+
+  margin-bottom: 302px;
+}
+
+.mobile-items {
+  margin-bottom: 32px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+.mobile-links {
+  @extend %links;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+
+  color: $heading-color;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.mobile-contact__list {
+  @extend %list;
+  margin-bottom: 64px;
+}
+
+.mobile-contact__item {
+  margin-bottom: 32px;
+}
+
+.contact__mail {
+  @extend %links;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.16;
+  letter-spacing: 0.02em;
+
+  color: $title-color-text;
+}
+.contact__tel {
+  @extend %links;
+  @media screen and (max-width: 355px) {
+    font-size: 25px;
+  }
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+
+  color: $accent-color;
+}
+.mobile-socials {
+  display: flex;
+
+  @extend %list;
+  margin-bottom: 48px;
+}
+.mobile-element {
+  display: inline-block;
+  margin-left: 10px;
+  margin-right: 10px;
+  color: rgba(33, 33, 33, 0.2);
+}
+.mobile-socials-links {
+  @extend %links;
+  @media screen and (max-width: 430px) {
+    font-size: 13px;
+  }
+  font-weight: 500;
+
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+  color: $accent-color;
+}

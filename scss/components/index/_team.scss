@@ -1,0 +1,112 @@
+.team {
+  background-color: $color-team;
+  padding: 60px 0;
+  @media screen and(min-width:1200px) {
+    padding: 94px 0;
+  }
+}
+.team-list {
+  @extend %list;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .team-card {
+    display: inline-block;
+    text-align: center;
+    display: inline-block;
+
+    background-color: $main-color;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+
+    @media screen and (min-width: 768px) {
+      min-width: 354px;
+      width: calc((100% - 4 * 15px) / 2);
+      margin-right: 30px;
+    }
+
+    @media screen and (max-width: 1199px) {
+      margin-bottom: 30px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      min-width: 270px;
+      width: calc((100% - 90px) / 4);
+    }
+
+    &:nth-child(2n) {
+      @media screen and (min-width: 768px) and (max-width: 1199px) {
+        margin-right: 0;
+      }
+    }
+    &:nth-child(4n) {
+      @media screen and (min-width: 1200px) {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.team-title {
+  margin-top: 30px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.2;
+
+  color: $heading-color;
+}
+
+.team-position {
+  margin-bottom: 16px;
+
+  font-size: 16px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+
+  color: $title-color-text;
+}
+
+.socials {
+  @extend %list;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 24px;
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 30px;
+  }
+}
+.socials-item {
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+
+.socials-link {
+  @extend %links;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  transition: background-color $transition-basic,
+    border-radius $transition-basic;
+
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+    border-radius: 50%;
+  }
+}
+.socials-link:hover .socials-icon,
+.socials-link:focus .socials-icon {
+  fill: $main-color;
+}
+.socials-icon {
+  fill: $color-icons;
+  transition: fill $transition-basic;
+}

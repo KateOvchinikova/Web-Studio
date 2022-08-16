@@ -1,0 +1,68 @@
+.clients {
+  padding-top: 60px;
+  padding-bottom: 30px;
+  @media screen and(min-width:1200px) {
+    padding-top: 94px;
+    padding-bottom: 64px;
+  }
+}
+.client-list {
+  @extend %list;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.client-item {
+  display: inline-block;
+  flex-basis: calc((100% - 4 * 15px) / 2);
+  margin-right: 30px;
+  margin-bottom: 30px;
+  &:nth-child(2n) {
+    @media screen and(max-width:479px) {
+      margin-right: 0;
+    }
+  }
+  &:nth-child(3n) {
+    @media screen and(min-width:768px) and(max-width:1199px) {
+      margin-right: 0;
+    }
+  }
+
+  &:last-child {
+    @media screen and(min-width:1200px) {
+      margin-right: 0;
+    }
+  }
+  @media screen and(min-width:768px) {
+    flex-basis: calc((100% - 6 * 15px) / 3);
+  }
+  @media screen and(min-width:1200px) {
+    flex-basis: calc((100% - 12 * 15px) / 6);
+    min-width: 170px;
+  }
+}
+
+.client-link {
+  @extend %links;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 92px;
+
+  border: 1px solid $color-icons;
+  border-radius: 4px;
+  transition: fill $transition-basic, border-color $transition-basic;
+
+  &:hover,
+  &:focus,
+  &:hover .client-icon,
+  &:focus .client-icon {
+    border-color: $accent-color;
+    fill: $accent-color;
+  }
+}
+
+.client-icon {
+  fill: $color-icons;
+  transition: fill $transition-basic;
+}
