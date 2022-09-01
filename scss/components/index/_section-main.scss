@@ -5,12 +5,42 @@
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
-    url(../images/background.jpg);
+    url(../../../images/background-mobile-x1.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 
   text-align: center;
+  // @media (min-device-pixel-ratio: 2),
+  //   (min-resolution: 192dpi),
+  //   (min-resolution: 2dppx) {
+  //   background-image: url(../../../images/background-mobile-x2.jpg);
+  // }
 
+  @media screen and (min-width: 567px) {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../../../images/background-tablet-x1.jpg);
+  }
+
+  // @media (min-device-pixel-ratio: 2),
+  //   (min-resolution: 192dpi),
+  //   (min-resolution: 2dppx) {
+  //   background-image: url(../../../images/background-tablet-x2.jpg);
+  // }
+  @media screen and (min-width: 950px) {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../../../images/background-decstop-x1.jpg);
+  }
+  // @media (min-device-pixel-ratio: 2),
+  //   (min-resolution: 192dpi),
+  //   (min-resolution: 2dppx) {
+  //   background-image: url(../../../images/background-decstop-x2.jpg);
+  // }
   @media screen and (min-width: 1200px) {
     max-width: 1600px;
     padding-top: 200px;
